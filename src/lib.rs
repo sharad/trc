@@ -50,7 +50,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         match Self.head {
             None => {
                 Self.head  = Self.tail = n;
-                n.next = n.prev = n
+                n.next = n.prev = n;
 
             }
             Some(Box( Node {} )) => {
