@@ -53,7 +53,6 @@ impl<K: Ord, V> lru<K, V> {
                 n.prev = self.tail;
                 self.head = self.nodes.size() + 1;
                 // tail = 
-
             }
         }
     }
