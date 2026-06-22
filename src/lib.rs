@@ -62,8 +62,8 @@ impl<K: Ord, V> lru<K, V> {
             }
         }
     }
-    fn findLink(key: &K) -> usize {
-        
+    fn findLink(self, key: &K) -> usize {
+        self.store.get(k).unwrap()
     }
     fn moveAhead(link: Link<K, V>){
         
