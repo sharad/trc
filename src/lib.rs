@@ -56,9 +56,7 @@ impl<K: Ord, V> lru<K, V> {
         if indx {
             None
         } else {
-            self.nodes.push(Node.new(k, v));
-            indx = self.nodes.size();
-            store.insert(k, indx)
+            indx = self.nodes[indx];
         }
     }
 
