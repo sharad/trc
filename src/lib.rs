@@ -49,7 +49,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
         match Self.head {
             None => {
-                Self.head  = Self.tail = Some(Box(Node.new(k, v)));
+                Self.head  = Self.tail = Some(Arc(Node.new(k, v)));
 
             }
             Some(Box( Node {} )) => {
