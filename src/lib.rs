@@ -9,14 +9,13 @@ type Link<K, V> = Option<Arc<RefCell<Node<K, V>>>>;
 struct Node<K, V> {
     key: K,
     value: V,
-    prev: Link<K, V>,
-    next: Link<K, V>,
+    prev: Option<usize>,
+    next: Option<usize>,
 }
 
 pub struct Lru<K: Eq+std::hash::Hash, V: Clone> {
     // Mutex
     capacity: usize,
-    size: usize,
     store: HashMap<K, V>,
     head: Link<K, V>,
     tail: Link<K, V>,
