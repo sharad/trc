@@ -9,8 +9,8 @@ type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
 struct Node<'a, K, V> {
     key: &'a K,
     value: &'a V,
-    prev: Option<Box<Node<'a, K, V>>>,
-    next: Option<Box<Node<'a, K, V>>>,
+    prev: Link<K, V>,
+    next: Link<K, V>,
 }
 
 pub struct Lru<'a, K, V> {
