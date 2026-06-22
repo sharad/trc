@@ -26,8 +26,8 @@ impl<K, V> Node<K, V> {
         Node{
             key,
             value,
-            0,
-            0
+            None,
+            None
         }
     }
 }
