@@ -39,6 +39,8 @@ impl<K: Ord, V> lru<K, V> {
 
     fn headInsert(&mut self, k: K, v: V) {
 
+        if let pos = self.store.get(k)
+
         self.nodes.push(Node.new(k, v))
 
         match self.head {
