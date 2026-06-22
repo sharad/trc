@@ -56,7 +56,7 @@ impl<K: Ord, V> lru<K, V> {
         if indx {
             None
         } else {
-            indx = self.nodes[indx];
+            indx = self.nodes[indx]
         }
     }
 
