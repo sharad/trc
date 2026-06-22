@@ -48,9 +48,9 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
     }
 
 
-    pub fn get(k: &'a K) -> &'a V{
+    pub fn get(&mut Self, k: &'a K) -> &'a V{
     }
-    pub fn put(k: &'a K, v: &'a V) {
+    pub fn put(&mut Self, k: &'a K, v: &'a V) {
     }
 }
 
