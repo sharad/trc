@@ -33,7 +33,12 @@ impl<'a, K: Ord, V> Node<'a, K, V> {
 impl<'a, K: Ord, V> lru<'a, K, V> {
 
     pub fn new(capacity: usize) -> Lru{
-        
+        Lru{
+            capacity,
+            size: 0,
+            None,
+            None
+        }
     }
 
     fn headInsert(k: &'a K, v: &'a V) {
