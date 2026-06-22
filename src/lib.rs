@@ -66,7 +66,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
     }
 
 
-    pub fn get(&mut self, k: &'a K) -> &'a V{
+    pub fn get(&mut self, k: &'a K) -> Option<V>{
     }
     pub fn put(&mut self, k: &'a K, v: &'a V) {
     }
