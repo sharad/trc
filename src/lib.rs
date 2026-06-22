@@ -17,7 +17,7 @@ pub struct Lru<K: Eq+std::hash::Hash, V: Clone> {
     // Mutex
     capacity: usize,
     store: HashMap<K, V>,
-    nodes: Vec<Node>
+    nodes: Vec<Node<K, V>>
     head: usize,
     tail: usize,
 }
