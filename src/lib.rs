@@ -45,7 +45,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
         match self.head {
             None => {
-                self.head  = Self.tail = n;
+                self.head  = self.tail = n;
                 n.next = n.prev = n;
             }
             Some(Arc( Ref(Node { head, tail }) )) => {
