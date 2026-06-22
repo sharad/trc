@@ -47,10 +47,7 @@ impl<K: Ord, V> lru<K, V> {
             indx = self.nodes.size();
             store.insert(k, indx)
         }
-
-        nodes[indx].next = self.head;
-        nodes[indx].prev = None;
-        self.head = indx;
+        moveAhead(indx);
     }
 
 
