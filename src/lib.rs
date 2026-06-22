@@ -62,7 +62,7 @@ impl<K: Ord, V> lru<K, V> {
             }
         }
     }
-    fn findLink(key: &K) {
+    fn findLink(key: &K) -> usize {
         
     }
     fn moveAhead(link: Link<K, V>){
