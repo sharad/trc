@@ -33,7 +33,7 @@ impl<K, V> Node<K, V> {
     }
 }
 
-impl<K: Ord, V> lru<'a, K, V> {
+impl<K: Ord, V> lru<K, V> {
 
     pub fn new(capacity: usize) -> Self {
         Lru{ capacity }
