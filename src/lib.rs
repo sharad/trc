@@ -1,0 +1,48 @@
+
+
+
+use std::collections::HashMap;
+
+
+struct Node<'a, K, V> {
+    key: &'a K,
+    value: &'a V,
+    prev: Option<Box<Node<'a, K, V>>>,
+    next: Option<Box<Node<'a, K, V>>>,
+}
+
+pub struct lru<K, V> {
+    capacity: int,
+    size: int,
+    store: HashMap<K, V>,
+    head: & mut Node,
+    tail: & mut Node,
+}
+
+impl<'a, K Ord, V> Node<'a, K, V> {
+    fn headInsert(k: &'a K, v: &'a V) {
+    };
+    fn tailRelease(k: &'a K) {
+    };
+}
+
+impl lru<'a, K, V> {
+    pub fn get(k &'a K) &V{
+    };
+    pub fn put(k &'a K, v &'a V) {
+    }
+}
+
+
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = add(2, 2);
+        assert_eq!(result, 4);
+    }
+}
