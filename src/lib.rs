@@ -11,7 +11,7 @@ struct Node<'a, K, V> {
     next: Option<Box<Node<'a, K, V>>>,
 }
 
-pub struct lru<'a, K, V> {
+pub struct Lru<'a, K, V> {
     capacity: usize,
     size: usize,
     store: HashMap<K, V>,
