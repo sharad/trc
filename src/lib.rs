@@ -39,9 +39,9 @@ impl<K: Ord, V> lru<K, V> {
 
     fn put(&mut self, k: K, v: V) {
 
-        let pos = self.store.get(k).unwrap();
-        if pos {
-            self.nodes[ pos ] = Node.new(k, v)
+        let indx = self.store.get(k).unwrap();
+        if indx {
+            self.nodes[ indx ] = Node.new(k, v)
         } else {
             self.nodes.push(Node.new(k, v));
             pos = self.nodes.size();
