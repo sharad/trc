@@ -73,7 +73,7 @@ impl<K: Ord, V> lru<K, V> {
         store.get(k).cloned()
     }
     pub fn put(&mut self, k: K, v: V) {
-        store.
+        store.put()
     }
 }
 
