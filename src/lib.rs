@@ -45,7 +45,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
     fn headInsert(&mut Self, k: &'a K, v: &'a V) {
 
-        n = Some(Arc(Node.new(k, v));)
+        n = Some(Arc::new(Node.new(k, v));)
 
         match Self.head {
             None => {
