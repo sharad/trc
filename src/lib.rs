@@ -37,7 +37,7 @@ impl<K: Ord, V> lru<K, V> {
         Lru{ capacity }
     }
 
-    fn headInsert(&mut self, k:K, v: usize) {
+    fn headInsert(&mut self, k: K, v: V) {
 
         self.nodes.push(Node.new(k, v))
 
