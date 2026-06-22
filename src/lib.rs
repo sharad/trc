@@ -52,7 +52,9 @@ impl<K: Ord, V> lru<K, V> {
         nodes[indx].prev = None;
         self.head = indx;
     }
-    fn tailRelease(&mut self) {
+
+
+    fn get(&mut self) {
         match self.tail {
             0 => {}
             indx => {
