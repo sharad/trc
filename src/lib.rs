@@ -12,8 +12,8 @@ struct Node<'a, K, V> {
 }
 
 pub struct lru<'a, K, V> {
-    capacity: int,
-    size: int,
+    capacity: usize,
+    size: usize,
     store: HashMap<K, V>,
     head: Option<Box<Node<'a, K, V>>>,
     tail: Option<Box<Node<'a, K, V>>>,
