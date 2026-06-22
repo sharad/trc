@@ -11,12 +11,12 @@ struct Node<'a, K, V> {
     next: Option<Box<Node<'a, K, V>>>,
 }
 
-pub struct lru<K, V> {
+pub struct lru<'a, K, V> {
     capacity: int,
     size: int,
     store: HashMap<K, V>,
-    head: & mut Node,
-    tail: & mut Node,
+    head: &'a mut Node,
+    tail: &'aq mut Node,
 }
 
 impl<'a, K: Ord, V> Node<'a, K, V> {
