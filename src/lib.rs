@@ -3,7 +3,7 @@
 
 use std::collections::HashMap;
 
-type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
+type Link<K, V> = Option<Arc<RefCell<Node<K, V>>>>;
 
 
 struct Node<K, V> {
