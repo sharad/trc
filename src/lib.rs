@@ -2,9 +2,8 @@
 
 
 use std::collections::HashMap;
+type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
 
-
-type Link = Option<Box<Node<'a, K, V>>>,
 
 struct Node<'a, K, V> {
     key: &'a K,
