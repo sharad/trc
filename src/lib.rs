@@ -51,7 +51,7 @@ impl<K: Ord, V> lru<K, V> {
     }
 
 
-    fn get(&mut self) {
+    fn drop(&mut self) {
         match self.tail {
             0 => {}
             indx => {
