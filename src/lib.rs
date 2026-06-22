@@ -43,10 +43,11 @@ impl<K: Ord, V> lru<K, V> {
         if pos {
             self.nodes[ pos - 1 ] = Node.new(k, v)
         } else {
-            self.nodes.push(Node.new(k, v))
+            self.nodes.push(Node.new(k, v));
+            pos = self.nodes.size();
         }
 
-        moveAhead()
+        moveAhead(pos)
         match self.head {
             0 => {
                 self.head  = self.tail = 1;
