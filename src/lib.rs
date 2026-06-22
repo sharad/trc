@@ -13,7 +13,7 @@ struct Node<'a, K, V> {
     next: Link<K, V>,
 }
 
-pub struct Lru<'a, K, V> {
+pub struct Lru<'a, K: EQ+std::hash::HASH, V> {
     capacity: usize,
     size: usize,
     store: Mutex<HashMap<K, V>>,
