@@ -27,9 +27,9 @@ impl<'a, K: Ord, V> Node<'a, K, V> {
 }
 
 impl lru<'a, K, V> {
-    pub fn get(k &'a K) -> &'a V{
+    pub fn get(k: &'a K) -> &'a V{
     };
-    pub fn put(k &'a K, v &'a V) {
+    pub fn put(k: &'a K, v: &'a V) {
     }
 }
 
