@@ -48,7 +48,9 @@ impl<K: Ord, V> lru<K, V> {
             store.insert(k, pos)
         }
 
-        moveAhead(pos)
+        nodes[indx].next = self.head;
+        nodes[indx].prev = None;
+        self.head = indx;
     }
     fn tailRelease(&mut self) {
         match self.tail {
