@@ -21,7 +21,7 @@ pub struct Lru<'a, K, V> {
     tail: Link<K, V>,
 }
 
-impl<'a, K: Ord, V> Node<'a, K, V> {
+impl<K: Ord, V> Node<'a, K, V> {
     pub fn new(key: &'a K, value: &'a V) -> Self {
         Node{
             key,
