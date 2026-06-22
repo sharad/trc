@@ -52,7 +52,14 @@ impl<K: Ord, V> lru<K, V> {
 
 
     pub fn get(&mut self, k: K) -> Option<V>{
-        store.get(k).cloned()
+        let indx = self.store.get(k).unwrap();
+        if indx {
+            self.nodes[ indx ] = Node.new(k, v)
+        } else {
+            self.nodes.push(Node.new(k, v));
+            indx = self.nodes.size();
+            store.insert(k, indx)
+        }
     }
 
 
