@@ -28,12 +28,6 @@ impl<'a, K: Ord, V> Node<'a, K, V> {
             None
         }
     }
-
-    fn headInsert(k: &'a K, v: &'a V) {
-        
-    }
-    fn tailRelease() {
-    }
 }
 
 impl<'a, K: Ord, V> lru<'a, K, V> {
