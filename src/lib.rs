@@ -41,7 +41,7 @@ impl<K: Ord, V> lru<K, V> {
 
         let pos = self.store.get(k);
         if pos {
-            self.nodes[ pos - 1] = Node.new(k, v)
+            self.nodes[ pos - 1 ] = Node.new(k, v)
         } else {
             self.nodes.push(Node.new(k, v))
         }
