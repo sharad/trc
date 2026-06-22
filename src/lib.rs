@@ -22,7 +22,7 @@ pub struct Lru<'a, K, V> {
 }
 
 impl<K: Ord, V> Node<K, V> {
-    pub fn new(key: &'a K, value: &'a V) -> Self {
+    pub fn new(key: K, value: V) -> Self {
         Node{
             key,
             value,
