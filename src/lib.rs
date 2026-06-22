@@ -59,7 +59,7 @@ impl<K: Ord, V> lru<K, V> {
     fn tailRelease(&mut self) {
         match self.tail {
             0 => {}
-            Some(Arc( Ref(Node { tail }) )) => {
+             => {
                 tail = tail.prev;
             }
         }
