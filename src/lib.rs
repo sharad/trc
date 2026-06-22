@@ -49,7 +49,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
                 n.next = n.prev = 1;
             }
             indx => {
-                n.next = head;
+                n.next = self.head;
                 n.prev = tail;
                 head = n;
                 // tail = 
