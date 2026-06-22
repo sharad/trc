@@ -21,7 +21,7 @@ pub struct Lru<K: Eq+std::hash::Hash, V: Clone> {
     tail: Link<K, V>,
 }
 
-impl<K: Ord, V> Node<K, V> {
+impl<K, V> Node<K, V> {
     pub fn new(key: K, value: V) -> Self {
         Node{
             key,
