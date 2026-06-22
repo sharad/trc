@@ -44,7 +44,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
     fn headInsert(&mut Self, k: &'a K, v: &'a V) {
         match Self.head {
             None => {}
-            Some(Box(_)) => {}
+            Some(Box( Node {} )) => {}
         }
     }
     fn tailRelease(&mut Self, ) {
