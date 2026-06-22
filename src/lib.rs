@@ -67,7 +67,6 @@ impl<K: Ord, V> lru<K, V> {
         nodes[indx].next = self.head;
         nodes[indx].prev = None;
         self.head = indx;
-
     }
 
     pub fn get(&mut self, k: K) -> Option<V>{
