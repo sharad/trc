@@ -60,7 +60,7 @@ impl<K: Ord, V> lru<K, V> {
         match self.tail {
             0 => {}
             indx => {
-                tail = tail.prev;
+                tail = self.nodes[indx].prev;
             }
         }
     }
