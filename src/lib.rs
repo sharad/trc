@@ -4,6 +4,8 @@
 use std::collections::HashMap;
 
 
+type Link = Option<Box<Node<'a, K, V>>>,
+
 struct Node<'a, K, V> {
     key: &'a K,
     value: &'a V,
