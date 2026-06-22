@@ -73,7 +73,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
     fn findKey(key: &K) {
         
     }
-    fn moveAhead(){
+    fn moveAhead(link: Link<K, V>){
         
     }
 
