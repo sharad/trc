@@ -65,6 +65,7 @@ impl<K: Ord, V> lru<K, V> {
     fn moveAhead(self, key: &K) -> usize {
         indx = self.store.get(k).unwrap();
         nodes[indx].next = self.head;
+        nodes[indx].prev = None
 
     }
 
