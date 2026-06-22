@@ -63,7 +63,8 @@ impl<K: Ord, V> lru<K, V> {
         }
     }
     fn moveAhead(self, key: &K) -> usize {
-        self.store.get(k).unwrap()
+        indx = self.store.get(k).unwrap();
+        nodes[indx].next = self.head
     }
 
     pub fn get(&mut self, k: K) -> Option<V>{
