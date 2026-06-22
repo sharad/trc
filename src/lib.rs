@@ -50,7 +50,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
             }
             indx => {
                 n.next = self.head;
-                n.prev = tail;
+                n.prev = self.tail;
                 head = n;
                 // tail = 
 
