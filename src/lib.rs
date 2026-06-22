@@ -48,15 +48,6 @@ impl<K: Ord, V> lru<K, V> {
         }
 
         moveAhead(pos)
-        match self.head {
-            0 => {
-                self.head  = self.tail = 1;
-                n.next = n.prev = 1;
-            }
-            indx => {
-
-            }
-        }
     }
     fn tailRelease(&mut self) {
         match self.tail {
