@@ -39,11 +39,11 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         Lru{ capacity }
     }
 
-    fn headInsert(&mut Self, k: &'a K, v: &'a V) {
+    fn headInsert(&mut self, k: &'a K, v: &'a V) {
 
         n = Node.new(k, v)
 
-        match Self.head {
+        match self.head {
             None => {
                 self.head  = Self.tail = n;
                 n.next = n.prev = n;
