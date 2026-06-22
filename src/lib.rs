@@ -41,7 +41,7 @@ impl<K: Ord, V> lru<K, V> {
 
     fn headInsert(&mut self, k: &'a K, v: &'a V) {
 
-        self.nodes.Node.new(k, v)
+        self.nodes.push(Node.new(k, v))
 
         match self.head {
             0 => {
