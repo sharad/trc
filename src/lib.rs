@@ -2,6 +2,7 @@
 
 
 use std::collections::HashMap;
+
 type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
 
 
