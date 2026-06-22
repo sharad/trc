@@ -73,7 +73,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
 
     pub fn get(&mut self, k: K) -> Option<V>{
-
+        store
     }
     pub fn put(&mut self, k: K, v: V) {
     }
