@@ -16,7 +16,7 @@ pub struct lru<'a, K, V> {
     size: int,
     store: HashMap<K, V>,
     head: &'a mut Node,
-    tail: &'aq mut Node,
+    tail: &'a mut Node,
 }
 
 impl<'a, K: Ord, V> Node<'a, K, V> {
