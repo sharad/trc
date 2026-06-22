@@ -44,7 +44,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         n = Node.new(k, v)
 
         match self.head {
-            None => {
+            0 => {
                 self.head  = self.tail = n;
                 n.next = n.prev = n;
             }
