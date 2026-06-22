@@ -70,7 +70,10 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
             }
         }
     }
-    fn moveAhead(key: &K){
+    fn findKey(key: &K) {
+        
+    }
+    fn moveAhead(){
         
     }
 
