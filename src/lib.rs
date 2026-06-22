@@ -73,7 +73,8 @@ impl<K: Ord, V> lru<K, V> {
         store.get(k).cloned()
     }
     pub fn put(&mut self, k: K, v: V) {
-        store.insert(k, v)
+        self.headInsert(k, v);
+        store.insert(k, self.nodes.size() + 1)
     }
 }
 
