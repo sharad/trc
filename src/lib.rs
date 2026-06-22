@@ -49,7 +49,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
         match Self.head {
             None => {
-                Self.head  = Self.tail = n;
+                self.head  = Self.tail = n;
                 n.next = n.prev = n;
 
             }
@@ -63,6 +63,8 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         }
     }
     fn tailRelease(&mut Self, ) {
+
+        match 
     }
 
 
