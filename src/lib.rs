@@ -37,8 +37,8 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
     pub fn new(capacity: usize) -> Self {
         Lru{
             capacity,
-            None,
-            None
+            0,
+            0
         }
     }
 
