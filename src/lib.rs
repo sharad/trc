@@ -31,6 +31,15 @@ impl<'a, K: Ord, V> Node<'a, K, V> {
 }
 
 impl<'a, K: Ord, V> lru<'a, K, V> {
+
+
+    fn headInsert(k: &'a K, v: &'a V) {
+
+    }
+    fn tailRelease() {
+    }
+
+
     pub fn get(k: &'a K) -> &'a V{
     }
     pub fn put(k: &'a K, v: &'a V) {
