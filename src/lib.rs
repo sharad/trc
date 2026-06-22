@@ -6,7 +6,7 @@ use std::collections::HashMap;
 type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
 
 
-struct Node<'a, K, V> {
+struct Node<K, V> {
     key: K,
     value: V,
     prev: Link<K, V>,
