@@ -70,7 +70,7 @@ impl<K: Ord, V> lru<K, V> {
     }
 
     pub fn get(&mut self, k: K) -> Option<V>{
-        store.get(k).unwrap().cloned()
+        store.get(k).cloned()
     }
     pub fn put(&mut self, k: K, v: V) {
         self.headInsert(k, v);
