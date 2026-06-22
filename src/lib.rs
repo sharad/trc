@@ -7,8 +7,8 @@ type Link<K, V> = Option<Rc<RefCell<Node<K, V>>>>;
 
 
 struct Node<'a, K, V> {
-    key: &'a K,
-    value: &'a V,
+    key: K,
+    value: V,
     prev: Link<K, V>,
     next: Link<K, V>,
 }
