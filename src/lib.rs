@@ -45,6 +45,8 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
     fn headInsert(&mut Self, k: &'a K, v: &'a V) {
 
+        n = Some(Node.new(k, v);)
+
         match Self.head {
             None => {
                 Self.head  = Self.tail = Some(Box(Node.new(k, v)));
