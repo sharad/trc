@@ -21,8 +21,13 @@ pub struct Lru<'a, K, V> {
 
 impl<'a, K: Ord, V> Node<'a, K, V> {
 
-    fn new() -> Self {
-        Node()
+    fn new(key: &'a K, value: &'a V) -> Self {
+        Node{
+            key,
+            value,
+            None,
+            None
+        }
     }
 
     fn headInsert(k: &'a K, v: &'a V) {
