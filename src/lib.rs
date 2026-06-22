@@ -51,6 +51,12 @@ impl<K: Ord, V> lru<K, V> {
     }
 
 
+    pub fn get(&mut self, k: K) -> Option<V>{
+        store.get(k).cloned()
+    }
+
+
+
     fn drop(&mut self) {
         match self.tail {
             0 => {}
@@ -66,9 +72,6 @@ impl<K: Ord, V> lru<K, V> {
         self.head = indx;
     }
 
-    pub fn get(&mut self, k: K) -> Option<V>{
-        store.get(k).cloned()
-    }
 }
 
 
