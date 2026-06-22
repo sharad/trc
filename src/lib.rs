@@ -51,7 +51,7 @@ impl<K: Ord, V> lru<K, V> {
             indx => {
                 n.next = self.head;
                 n.prev = self.tail;
-                self.head = n;
+                self.head = self.nodes.size() + 1;
                 // tail = 
 
             }
