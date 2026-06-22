@@ -16,7 +16,7 @@ struct Node<'a, K, V> {
 pub struct Lru<'a, K, V> {
     capacity: usize,
     size: usize,
-    store: HashMap<K, V>,
+    store: Mutex<HashMap<K, V>>,
     head: Option<Box<Node<'a, K, V>>>,
     tail: Option<Box<Node<'a, K, V>>>,
 }
