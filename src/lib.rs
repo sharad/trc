@@ -53,7 +53,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
                 n.next = n.prev = n;
 
             }
-            Some(Box( Node {} )) => {
+            Some(Arc( Ref(Node { head, tail }) )) => {
             }
         }
     }
