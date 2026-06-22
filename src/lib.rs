@@ -18,7 +18,7 @@ pub struct Lru<'a, K, V> {
     size: usize,
     store: Mutex<HashMap<K, V>>,
     head: Link<K, V>,
-    tail: Option<Box<Node<'a, K, V>>>,
+    tail: Link<K, V>,
 }
 
 impl<'a, K: Ord, V> Node<'a, K, V> {
