@@ -41,10 +41,10 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         }
     }
 
-    fn headInsert(k: &'a K, v: &'a V) {
+    fn headInsert(&mut Self, k: &'a K, v: &'a V) {
         
     }
-    fn tailRelease() {
+    fn tailRelease(&mut Self, ) {
     }
 
 
