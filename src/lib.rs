@@ -33,7 +33,7 @@ impl<K, V> Node<K, V> {
     }
 }
 
-impl<'a, K: Ord, V> lru<'a, K, V> {
+impl<K: Ord, V> lru<'a, K, V> {
 
     pub fn new(capacity: usize) -> Self {
         Lru{ capacity }
@@ -41,7 +41,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
 
     fn headInsert(&mut self, k: &'a K, v: &'a V) {
 
-        n = Node.new(k, v)
+        self.nodes.Node.new(k, v)
 
         match self.head {
             0 => {
@@ -51,7 +51,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
             indx => {
                 n.next = self.head;
                 n.prev = self.tail;
-                head = n;
+                self.head = n;
                 // tail = 
 
             }
