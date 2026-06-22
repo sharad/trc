@@ -3,8 +3,6 @@
 
 use std::collections::HashMap;
 
-type Link<K, V> = Option<Arc<RefCell<Node<K, V>>>>;
-
 
 struct Node<K, V> {
     key: K,
