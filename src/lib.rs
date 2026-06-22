@@ -51,10 +51,7 @@ impl<K: Ord, V> lru<K, V> {
                 n.next = n.prev = 1;
             }
             indx => {
-                n.next = self.head;
-                n.prev = self.tail;
-                self.head = self.nodes.size() + 1;
-                // tail = 
+
             }
         }
     }
@@ -66,8 +63,8 @@ impl<K: Ord, V> lru<K, V> {
             }
         }
     }
-    fn moveAhead(self, key: &K) -> usize {
-        indx = self.store.get(k).unwrap();
+    fn moveAhead(self, indx: usize) -> usize {
+        // indx = self.store.get(k).unwrap();
         nodes[indx].next = self.head;
         nodes[indx].prev = None;
         self.head = indx;
