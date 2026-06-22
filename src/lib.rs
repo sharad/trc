@@ -66,7 +66,7 @@ impl<'a, K: Ord, V> lru<'a, K, V> {
         match self.tail {
             None => {}
             Some(Arc( Ref(Node { head, tail }) )) => {
-                
+                tail = tail.prev;
             }
         }
     }
